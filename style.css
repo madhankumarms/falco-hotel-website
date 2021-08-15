@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap");
+
+:root {
+  --primary-color: #0f4c75;
+  --black-color: #1b262c;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  background: #e7e7e7;
+  color: var(--black-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0.8rem 0;
+}
+
+/* Basic Utilities class */
+
+.heading-primary {
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+
+.heading-secondary {
+  font-size: 2.8rem;
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  margin: 1rem 0;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+/* Button Styles */
+
+.btn {
+  display: inline-block;
+  margin: 1.5rem 0;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  position: relative;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  filter: brightness(110%);
+  transform: scale(1.1);
+}
+
+.btn-primary {
+  background: #f7f7f7;
+  color: #333;
+}
+
+.btn-secondary {
+  background: var(--primary-color);
+  color: #f7f7f7;
+}
+
+/* Header styles */
+
+.header {
+  height: 65vh;
+  background: url("img/hero.jpg") center/cover no-repeat;
+  position: relative;
+  width: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7));
+}
+
+.header-content {
+  color: whitesmoke;
+  z-index: 10;
+  text-align: center;
+}
+
+.header .heading-secondary {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+/* Navbar Styles */
+
+.nav {
+  background: var(--black-color);
+  text-transform: uppercase;
+  color: #f7f7f7;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-list {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 2rem 3rem;
+  margin: 0 2.5rem;
+  transition: all 0.3s;
+}
+
+.nav-item:hover {
+  background: var(--primary-color);
+}
+
+.main {
+  padding: 5rem 0;
+}
+
+/* Title Styles */
+
+.services .heading-secondary,
+.about .heading-secondary {
+  text-align: center;
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 1rem;
+  max-width: 15rem;
+  margin: 0 auto;
+}
+
+/* Overview Section */
+.overview {
+  padding: 3rem 5rem;
+  margin: 10rem;
+  position: relative;
+}
+
+.overview-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.overview-content {
+  flex: 0 0 50%;
+  color: var(--black-color);
+}
+
+.overview-content p {
+  font-size: 2rem;
+}
+
+.overview-pic {
+  position: relative;
+  width: 30rem;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.o-1 {
+  bottom: 8rem;
+  left: 16rem;
+}
+
+/* Services Section */
+
+.services {
+  padding: 3rem 5rem;
+  margin-bottom: 5rem;
+  color: #f7f7f7;
+  background: var(--primary-color);
+}
+
+.services .heading-secondary {
+  color: #f7f7f7;
+  border-bottom: 3px solid #f7f7f7;
+}
+
+.service-box {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.service-card {
+  text-align: center;
+  border-radius: 5px;
+  flex: 0 0 30%;
+  padding: 3rem 6rem;
+}
+
+.service-card-icon {
+  color: #f7f7f7;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+/* About section  */
+
+.about-box {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-content {
+  font-size: 1.8rem;
+}
+
+/* Booking section */
+.booking {
+  padding: 3rem 5rem;
+  background: var(--primary-color);
+  color: #f7f7f7;
+}
+
+.form {
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin: 2rem 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.form-input {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+}
+
+.btn-submit {
+  left: 40%;
+  padding: 1rem 5rem;
+}
+
+/* Footer Styles */
+
+.footer {
+  background: var(--black-color);
+  color: #f7f7f7;
+  padding: 1rem 2rem;
+  text-align: center;
+}

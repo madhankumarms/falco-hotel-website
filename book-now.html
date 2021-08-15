@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falco Hotel | Place to plan vacation with your family</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <h1 class="heading-primary">Falco Hotel</h1>
+        <h2 class="heading-secondary">
+          A place to plan vacation with your family
+        </h2>
+
+        <button class="btn btn-primary">Book Now</button>
+      </div>
+    </header>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="#services" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+      </ul>
+    </nav>
+
+    <section id="booking" class="booking">
+      <div class="container">
+        <h2 class="heading-secondary">Hotel Booking</h2>
+        <form action="#" class="form">
+          <div class="form-group">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-input" id="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-input" id="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone number:</label>
+            <input type="number" class="form-input" id="phone" />
+          </div>
+
+          <div class="form-box">
+            <div class="form-group">
+              <label for="arrived" class="form-label">Arrived Date:</label>
+              <input type="date" class="form-input" id="arrived" />
+            </div>
+
+            <div class="form-group">
+              <label for="depart" class="form-label">Depart:</label>
+              <input type="date" class="form-input" id="depart" />
+            </div>
+          </div>
+
+          <div class="form-box">
+            <div class="form-group">
+              <label for="people" class="form-label">People:</label>
+              <input type="number" class="form-input" id="people" />
+            </div>
+
+            <div class="form-group">
+              <label for="room" class="form-label">Room:</label>
+              <input type="number" class="form-input" id="room" />
+            </div>
+          </div>
+          <input
+            type="submit"
+            value="Submit"
+            class="btn btn-primary btn-submit"
+          />
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Falco Hotel &copy; Copyrights 2020 Reserved.
+    </footer>
+
+    <script>
+      if ("geolocation" in navigator) {
+        setTimeout(() => {
+          console.log("Geolocation is available");
+          navigator.geolocation.getCurrentPosition(function (position) {
+            lat = position.coords.latitude;
+            long = position.coords.longitude;
+            alert(`Location is Latitude: ${lat} Longitude: ${long}`);
+          });
+        }, 5000);
+      } else {
+        console.log("geolocation is not available");
+      }
+    </script>
+  </body>
+</html>
